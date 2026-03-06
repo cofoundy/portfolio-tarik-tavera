@@ -1,0 +1,50 @@
+---
+import { siteConfig } from "../config";
+const hasCTA = siteConfig.cta;
+---
+
+{hasCTA && (
+  <div class="w-full h-2 bar-shimmer"></div>
+
+  <section
+    id="cta"
+    class="py-16 md:py-20"
+    style={`background-color: ${siteConfig.colors.surfaceLight}`}
+  >
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="reveal">
+        <!-- Icon -->
+        <div
+          class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
+          style={`background-color: ${siteConfig.colors.accent}20`}
+        >
+          <svg class="w-8 h-8" style={`color: ${siteConfig.colors.accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+        </div>
+
+        <h2
+          class="text-2xl md:text-3xl font-semibold mb-4"
+          style={`color: ${siteConfig.accentColor}; font-family: 'Raleway', sans-serif;`}
+        >
+          {siteConfig.cta.title}
+        </h2>
+
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+          {siteConfig.cta.description}
+        </p>
+
+        <a
+          href={`mailto:${siteConfig.social?.email}?subject=${siteConfig.cta.emailSubject || 'Contacto'}`}
+          class="btn-hover inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-medium text-lg"
+          style={`background-color: ${siteConfig.colors.accent}`}
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          {siteConfig.cta.buttonText}
+        </a>
+      </div>
+    </div>
+  </section>
+)}

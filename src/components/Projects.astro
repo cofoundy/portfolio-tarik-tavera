@@ -1,0 +1,67 @@
+---
+import { siteConfig } from "../config";
+const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+---
+
+{hasProjects && (
+  <section
+    id="projects"
+    class="py-12 md:py-16"
+    style={`background-color: ${siteConfig.colors.surface}`}
+  >
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="mb-10 reveal-left">
+        <h2
+          class="text-3xl md:text-4xl font-bold"
+          style={`color: ${siteConfig.accentColor}`}
+        >
+          Proyectos
+        </h2>
+        <div
+          class="w-16 h-1 mt-3 rounded-full"
+          style={`background-color: ${siteConfig.colors.accent}`}
+        ></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {siteConfig.projects.map((project, index) => (
+          <div
+            class={`reveal stagger-${index + 1} project-card card-hover p-6 rounded-xl`}
+            style={`background-color: white; border: 1px solid ${siteConfig.colors.primary}20`}
+          >
+            <h3
+              class="text-lg font-semibold mb-2"
+              style={`color: ${siteConfig.accentColor}`}
+            >
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link-underline hover:opacity-80 transition-opacity"
+                >
+                  {project.name}
+                </a>
+              ) : (
+                project.name
+              )}
+            </h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+              <Fragment set:html={project.description} />
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              {project.skills.map((skill) => (
+                <span
+                  class="text-xs px-2.5 py-1 rounded-full font-medium"
+                  style={`background-color: ${siteConfig.colors.accent}15; color: ${siteConfig.colors.accent}`}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

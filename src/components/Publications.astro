@@ -1,0 +1,118 @@
+---
+import { siteConfig } from "../config";
+
+const publications = [
+  {
+    title: "The importance of the study and analysis of the Santiago de Surco district's park quantity, quality and spatial distribution in the context of climate change",
+    authors: "Tavera, T. et al.",
+    journal: "Espacio y Desarrollo",
+    issue: "(31), pp. 89-116",
+    year: "2018",
+    institution: "PUCP",
+  },
+  {
+    title: "From national forest \"Bosque Nacionales\" to forest concessions: study of \"Bosque Nacional Alexander Von Humboldt\" from a geohistorical approach (1960-2017)",
+    authors: "Dunin Borkowski, A. et al.",
+    journal: "Espacio y Desarrollo",
+    issue: "(39), pp. 1-31",
+    year: "2022",
+    institution: "PUCP",
+  },
+  {
+    title: "Looking at Vila Olímpia with Peruvian eyes: contrasts of urban life during \"lunch time\"",
+    authors: "Vega Centeno, P. et al.",
+    journal: "Ponto Urbe — Revista do Núcleo de Antropologia Urbana da USP",
+    issue: "(30, v.2)",
+    year: "2022",
+    institution: "USP, Brasil",
+  },
+];
+
+const awards = [
+  { name: "Beca ITEC India — Programa de Cooperación Técnica y Económica", year: "2023" },
+  { name: "Beca TReeS UK (Tambopata Reserve Society) — Financiamiento de tesis", year: "2018" },
+  { name: "Beca PREDES — Gestión del riesgo de desastres con enfoque de inclusión", year: "2023" },
+  { name: "Fondo CIAC semilla — \"100 años de Barriada: Periferia urbana en laderas amazónicas\"", year: "2024" },
+];
+---
+
+<section
+  id="publications"
+  class="py-12 md:py-16"
+  style="background-color: white"
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- Header -->
+    <div class="mb-10 reveal-left">
+      <h2
+        class="text-3xl md:text-4xl font-bold"
+        style={`color: ${siteConfig.accentColor}`}
+      >
+        Publicaciones & Becas
+      </h2>
+      <div
+        class="w-16 h-1 mt-3 rounded-full"
+        style={`background-color: ${siteConfig.colors.accent}`}
+      ></div>
+    </div>
+
+    <!-- Publications Grid -->
+    <div class="grid grid-cols-1 gap-4 mb-10">
+      {publications.map((pub, index) => (
+        <div
+          class={`reveal stagger-${index + 1} card-hover p-5 rounded-xl`}
+          style={`background-color: ${siteConfig.colors.surfaceLight}; border: 1px solid ${siteConfig.colors.primary}15`}
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center mt-1"
+              style={`background-color: ${siteConfig.colors.accent}15`}
+            >
+              <svg class="w-5 h-5" style={`color: ${siteConfig.colors.accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3
+                class="text-base font-semibold leading-snug mb-1"
+                style={`color: ${siteConfig.accentColor}`}
+              >
+                {pub.title}
+              </h3>
+              <p class="text-sm text-gray-600">
+                {pub.authors} ({pub.year}). <em>{pub.journal}</em>, {pub.issue}. {pub.institution}.
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Awards -->
+    <div class="reveal stagger-4">
+      <h3
+        class="text-sm font-semibold uppercase tracking-wider mb-4"
+        style={`color: ${siteConfig.colors.primary}`}
+      >
+        Becas y Reconocimientos
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {awards.map((award, index) => (
+          <div
+            class={`flex items-start gap-3 p-3 rounded-lg stagger-${Math.min(index + 1, 6)}`}
+            style={`background-color: ${siteConfig.colors.surface}`}
+          >
+            <span
+              class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+              style={`background-color: ${siteConfig.colors.accent}`}
+            ></span>
+            <div>
+              <p class="text-sm text-gray-700">{award.name}</p>
+              <p class="text-xs mt-0.5" style={`color: ${siteConfig.colors.primary}`}>{award.year}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
