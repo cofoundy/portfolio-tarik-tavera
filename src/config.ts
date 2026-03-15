@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Tarik Tavera Medina",
-  title: "Geógrafo & Consultor en Territorio y Sostenibilidad",
+  title: "Consultor en Conservación, Gestión del Riesgo y Gobernanza Territorial en Amazonía",
   description: "Portfolio de Tarik Tavera — Geógrafo especializado en Amazonía, cambio climático y gestión del riesgo de desastres con enfoque participativo y territorial.",
   accentColor: "#1b4332",
 
@@ -13,25 +13,25 @@ export const siteConfig = {
     surfaceLight: "#f8f5f0",   // Off-white warm — hero bg
   },
 
-  tagline: "Herramientas geoespaciales y enfoques participativos para la toma de decisiones en conservación, territorio y desarrollo sostenible.",
+  tagline: "Soluciones geoespaciales y enfoques participativos para fortalecer la toma de decisiones frente a los desafíos del cambio climático en comunidades, ciudades y ecosistemas.",
 
   stats: [
-    { value: "10+", label: "Años de experiencia" },
+    { value: "+100", label: "Regiones, paisajes y comunidades" },
+    { value: "7+", label: "Años de experiencia" },
     { value: "15+", label: "Organizaciones" },
-    { value: "PUCP", label: "Geógrafo colegiado" },
   ],
 
   quote: {
-    text: "Mis innovaciones son herramientas y estrategias técnicas para la toma de decisiones frente a vulnerabilidades en áreas de conservación y regiones de conflicto",
+    text: "El diálogo entre lo urbano, la conservación y la agricultura me ha permitido comprender cómo la geografía permite reconocer las desigualdades territoriales y las vulnerabilidades de quienes los habitan.",
     author: "Tarik Tavera",
   },
 
   services: [
     {
       icon: "chart",
-      title: "Análisis Territorial & GIS",
-      description: "Sistemas de información geográfica, teledetección y cartografía para la planificación territorial y el monitoreo ambiental.",
-      items: ["GIS: GEE, QGIS, ArcGIS", "Teledetección y RPAS", "Cartografía temática", "Big Data geoespacial"],
+      title: "Inteligencia Geoespacial del Territorio",
+      description: "Uso de herramientas de GIS para el monitoreo de los cambios y retos para la planificación y gestión territorial.",
+      items: ["Monitoreo satelital y análisis geoespacial del territorio", "Cartografía temática y análisis espacial aplicado", "Dinámicas socioambientales de los cambios en cobertura y uso del suelo", "Sistemas de información geográfica para la gestión territorial", "Visualización de datos territoriales y plataformas geoespaciales"],
     },
     {
       icon: "shield",
@@ -48,7 +48,7 @@ export const siteConfig = {
   ],
 
   cta: {
-    title: "¿Necesitas consultoría territorial?",
+    title: "Geografía en acción",
     description: "Trabajo con organizaciones internacionales, gobiernos y comunidades para diseñar soluciones geoespaciales y participativas. Conversemos sobre tu proyecto.",
     buttonText: "Conversemos",
     emailSubject: "Consulta sobre consultoría territorial",
@@ -57,10 +57,11 @@ export const siteConfig = {
   social: {
     email: "geotariktavera@gmail.com",
     linkedin: "https://www.linkedin.com/in/tariktaveramedina",
+    instagram: "https://www.instagram.com/espacioyanalisis/",
   },
 
   aboutMe:
-    "Geógrafo de la <strong>Pontificia Universidad Católica del Perú</strong> con más de 10 años de experiencia multisectorial en Amazonía, cambio climático y gestión del riesgo de desastres. He trabajado con organizaciones internacionales como <strong>OIM, Frankfurt Zoological Society y CARE Perú</strong>, entidades gubernamentales como <strong>SERNANP, OSINFOR e INAIGEM</strong>, y la academia. Mi enfoque combina herramientas geoespaciales avanzadas con metodologías participativas para la toma de decisiones en conservación y desarrollo territorial.",
+    "Geógrafo de la Pontificia Universidad Católica del Perú (PUCP), con más de siete años de experiencia en la Amazonía peruana, cambio climático y gestión del riesgo de desastres. He colaborado <strong>con agencias del sistema de Naciones Unidas, Frankfurt Zoological Society, CARE Perú</strong> y entidades públicas como <strong>SERNANP, OSINFOR e INAIGEM</strong>. Mi trabajo propone metodologías y herramientas <strong>que traducen el análisis territoriales y socioambientales en acciones estratégicas y focalizadas</strong> para la conservación, la gestión climática y las salvaguardas territoriales de comunidades frente a vulnerabilidades y amenazas.",
 
   skills: [
     "GIS (GEE, QGIS, ArcGIS)",
@@ -74,6 +75,12 @@ export const siteConfig = {
     "Power BI",
     "Docencia universitaria",
     "Inglés fluido",
+    "Salvaguardas socioambientales",
+    "Proyectos comunitarios",
+    "Sistema de alerta temprana",
+    "Monitoreo agroclimático",
+    "Planificación urbana",
+    "Pueblos indígenas",
   ],
 
   projects: [
@@ -100,6 +107,18 @@ export const siteConfig = {
       description: "Sistema de comunicación y geolocalización de alertas sobre amenazas territoriales en comunidades Asháninka del río Ene.",
       link: "",
       skills: ["Alerta temprana", "Geolocalización", "Pueblos indígenas"],
+    },
+    {
+      name: "Amazonía: desafíos, tecnología e indígenas",
+      description: "Descifrar los riesgos socioambientales que emergen de la expansión urbana, el cambio climático y las transformaciones del territorio.",
+      link: "https://www.google.com/maps/d/edit?mid=1I9Xer2zNNg7xWk4IwUupd-j4E-AIJ28&usp=sharing",
+      skills: ["VRAEM", "Paisaje Manu-Purús", "Pueblos indígenas", "SERNANP", "Café y Cacao"],
+    },
+    {
+      name: "Portafolio de instrumentos, herramientas y mapas",
+      description: "Metodologías para comprender transformaciones socioambientales y apoyar decisiones en contextos territoriales complejos.",
+      link: "https://drive.google.com/drive/folders/1EIGrly2QQ2O1lwa90w3VvfNWagK6SROi?usp=drive_link",
+      skills: ["DDHH", "Sistema de Alerta Temprana", "Salvaguardas", "Monitoreo"],
     },
   ],
 

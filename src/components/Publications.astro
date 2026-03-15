@@ -9,6 +9,7 @@ const publications = [
     issue: "(31), pp. 89-116",
     year: "2018",
     institution: "PUCP",
+    link: "https://revistas.pucp.edu.pe/index.php/espacioydesarrollo/article/view/20179",
   },
   {
     title: "From national forest \"Bosque Nacionales\" to forest concessions: study of \"Bosque Nacional Alexander Von Humboldt\" from a geohistorical approach (1960-2017)",
@@ -17,6 +18,7 @@ const publications = [
     issue: "(39), pp. 1-31",
     year: "2022",
     institution: "PUCP",
+    link: "https://revistas.pucp.edu.pe/index.php/espacioydesarrollo/article/view/25555",
   },
   {
     title: "Looking at Vila Olímpia with Peruvian eyes: contrasts of urban life during \"lunch time\"",
@@ -25,6 +27,7 @@ const publications = [
     issue: "(30, v.2)",
     year: "2022",
     institution: "USP, Brasil",
+    link: "https://journals.openedition.org/pontourbe/12990",
   },
 ];
 
@@ -77,7 +80,11 @@ const awards = [
                 class="text-base font-semibold leading-snug mb-1"
                 style={`color: ${siteConfig.accentColor}`}
               >
-                {pub.title}
+                {pub.link ? (
+                  <a href={pub.link} target="_blank" rel="noopener noreferrer" class="link-underline hover:opacity-80 transition-opacity">
+                    {pub.title}
+                  </a>
+                ) : pub.title}
               </h3>
               <p class="text-sm text-gray-600">
                 {pub.authors} ({pub.year}). <em>{pub.journal}</em>, {pub.issue}. {pub.institution}.
