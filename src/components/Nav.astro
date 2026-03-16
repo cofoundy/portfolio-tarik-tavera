@@ -1,0 +1,78 @@
+---
+import { siteConfig } from "../config";
+const initials = siteConfig.name.split(" ").map(n => n[0]).join("").slice(0, 2);
+const sections = [
+  { id: "sobre", label: "Sobre mí" },
+  { id: "soluciones", label: "Soluciones" },
+  { id: "amazonia", label: "Amazonía" },
+  { id: "trayectoria", label: "Trayectoria" },
+  { id: "publicaciones", label: "Publicaciones" },
+  { id: "contacto", label: "Contacto" },
+];
+const blogLink = "/blog/";
+
+---
+
+<!-- Top bar nav -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-surface-light)]/90 backdrop-blur-sm border-b border-[var(--color-primary)]/10">
+  <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#" class="font-serif text-xl font-bold tracking-wide" style={`color: var(--color-primary-dark)`}>
+      — {initials}
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-6">
+      {sections.map(s => (
+        <a href={`#${s.id}`} class="text-sm font-medium text-gray-600 hover:text-[var(--color-primary-dark)] transition-colors">
+          {s.label}
+        </a>
+      ))}
+      <a href={blogLink} class="text-sm font-medium text-gray-600 hover:text-[var(--color-primary-dark)] transition-colors">
+        Blog
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="mobile-toggle" class="md:hidden p-2 text-[var(--color-primary-dark)]" aria-label="Menú">
+      <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[var(--color-surface-light)] border-t border-[var(--color-primary)]/10 px-6 pb-4">
+    {sections.map(s => (
+      <a href={`#${s.id}`} class="block py-2.5 text-sm font-medium text-gray-700 hover:text-[var(--color-primary-dark)]" data-mobile-link>
+        {s.label}
+      </a>
+    ))}
+    <a href={blogLink} class="block py-2.5 text-sm font-medium text-gray-700 hover:text-[var(--color-primary-dark)]" data-mobile-link>
+      Blog
+    </a>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    hamburger?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('[data-mobile-link]').forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+      hamburger?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    });
+  });
+</script>

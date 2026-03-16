@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import { siteConfig } from "../../config";
+import "../../styles/global.css";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString("es-PE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+---
+
+<html lang="es" style={`--color-primary-dark:${siteConfig.colors.primaryDark};--color-primary:${siteConfig.colors.primary};--color-primary-light:${siteConfig.colors.primaryLight};--color-accent:${siteConfig.colors.accent};--color-surface:${siteConfig.colors.surface};--color-surface-light:${siteConfig.colors.surfaceLight}`}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={`Blog de ${siteConfig.name}`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blog — {siteConfig.name}</title>
+  </head>
+  <body class="bg-[var(--color-surface-light)]">
+    <Nav />
+    <main class="pt-20 pb-16 min-h-screen">
+      <div class="max-w-3xl mx-auto px-6">
+        <h1 class="font-serif text-4xl md:text-5xl font-bold mb-2" style="color: var(--color-primary-dark)">
+          Blog
+        </h1>
+        <p class="text-gray-600 mb-10">
+          Reflexiones sobre geografía, territorio y sostenibilidad.
+        </p>
+
+        {posts.length === 0 ? (
+          <p class="text-gray-500 italic">Próximamente...</p>
+        ) : (
+          <div class="space-y-6">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.id}/`}
+                class="card-lift block bg-white rounded-xl p-6 border border-[var(--color-primary)]/10 group"
+              >
+                <time class="text-xs font-medium" style="color: var(--color-accent)">
+                  {formatDate(post.data.pubDate)}
+                </time>
+                <h2 class="font-serif text-xl md:text-2xl font-bold mt-1 group-hover:underline" style="color: var(--color-primary-dark)">
+                  {post.data.title}
+                </h2>
+                <p class="text-sm text-gray-600 mt-2">{post.data.description}</p>
+              </a>
+            ))}
+          </div>
+        )}
+
+        <div class="mt-12">
+          <a href="/" class="text-sm font-medium link-underline" style="color: var(--color-primary)">
+            ← Volver al portfolio
+          </a>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

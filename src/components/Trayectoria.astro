@@ -1,0 +1,48 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="trayectoria" class="py-16 md:py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="reveal font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-12" style="color: var(--color-primary-dark)">
+      Trayectoria
+    </h2>
+
+    <div class="space-y-8">
+      {siteConfig.experience.map((exp, i) => (
+        <div class={`reveal stagger-${Math.min(i + 1, 6)} group`}>
+          <div class="flex items-start gap-4 md:gap-6">
+            <!-- Timeline dot + line -->
+            <div class="flex flex-col items-center shrink-0">
+              <div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-primary)"></div>
+              {i < siteConfig.experience.length - 1 && (
+                <div class="w-px flex-1 min-h-[40px] mt-2" style="background: var(--color-primary); opacity: 0.2"></div>
+              )}
+            </div>
+
+            <!-- Content -->
+            <div class="pb-6">
+              <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
+                <h3 class="font-serif text-xl md:text-2xl font-bold" style="color: var(--color-primary-dark)">
+                  {exp.company}
+                </h3>
+                <span class="text-sm font-medium" style="color: var(--color-accent)">
+                  {exp.dateRange}
+                </span>
+              </div>
+              <p class="text-sm font-medium text-gray-500 mb-3">{exp.title}</p>
+              <ul class="space-y-1.5">
+                {exp.bullets.map(bullet => (
+                  <li class="flex items-start gap-2 text-sm text-gray-700 leading-relaxed">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background: var(--color-accent)"></span>
+                    <span set:html={bullet} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

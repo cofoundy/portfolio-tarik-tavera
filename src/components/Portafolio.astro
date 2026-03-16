@@ -1,0 +1,45 @@
+---
+import { siteConfig } from "../config";
+const { portafolio } = siteConfig;
+
+const iconMap: Record<string, string> = {
+  scale: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"/></svg>',
+  bell: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>',
+  fire: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/></svg>',
+  mountain: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21l6.75-9.75L12 15l3-4.5L21 21H3z"/></svg>',
+  leaf: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-4-8-7.5-8-12a8 8 0 0116 0c0 4.5-4 8-8 12z"/></svg>',
+};
+---
+
+<section id="portafolio" class="py-16 md:py-24" style="background-color: var(--color-surface)">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="reveal font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: var(--color-primary-dark)">
+      {portafolio.title}
+    </h2>
+    <p class="reveal stagger-1 text-base md:text-lg text-gray-600 mb-10 max-w-3xl">
+      {portafolio.description}
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {portafolio.items.map((item, i) => (
+        <div class={`reveal stagger-${i + 1} card-lift flex flex-col items-center justify-center gap-3 p-6 bg-white rounded-xl border border-[var(--color-primary)]/10 text-center`}>
+          <div style="color: var(--color-primary)" set:html={iconMap[item.icon] || iconMap.leaf} />
+          <span class="text-sm font-medium" style="color: var(--color-primary-dark)">{item.label}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal stagger-6 mt-8 text-center">
+      <a
+        href={portafolio.driveUrl}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 text-sm font-medium link-underline"
+        style="color: var(--color-accent)"
+      >
+        Ver portafolio completo
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      </a>
+    </div>
+  </div>
+</section>

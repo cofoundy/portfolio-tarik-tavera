@@ -1,0 +1,44 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="formacion" class="py-16 md:py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+      <!-- Education -->
+      <div>
+        <h2 class="reveal font-serif text-3xl md:text-4xl font-bold mb-8" style="color: var(--color-primary-dark)">
+          Formación
+        </h2>
+        <div class="space-y-6">
+          {siteConfig.education.map((edu, i) => (
+            <div class={`reveal stagger-${i + 1}`}>
+              <h3 class="font-serif text-lg font-bold" style="color: var(--color-primary-dark)">
+                {edu.school}
+              </h3>
+              <p class="text-sm font-medium" style="color: var(--color-accent)">
+                {edu.degree} · {edu.dateRange}
+              </p>
+              <p class="text-sm text-gray-600 mt-1">{edu.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Awards -->
+      <div>
+        <h2 class="reveal font-serif text-3xl md:text-4xl font-bold mb-8" style="color: var(--color-primary-dark)">
+          Becas y Reconocimientos
+        </h2>
+        <div class="space-y-3">
+          {siteConfig.awards.map((award, i) => (
+            <div class={`reveal stagger-${i + 1} flex items-center gap-3`}>
+              <div class="w-2 h-2 rounded-full shrink-0" style="background: var(--color-primary-light)"></div>
+              <p class="text-sm md:text-base text-gray-700">{award}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
