@@ -4,17 +4,24 @@ const { cta, social } = siteConfig;
 const mailto = `mailto:${social.email}?subject=${encodeURIComponent(cta.emailSubject)}`;
 ---
 
-<section id="contacto" class="py-16 md:py-24 topo-pattern" style="background-color: var(--color-surface)">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="reveal font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: var(--color-primary-dark)">
+<section id="contacto" class="relative py-20 md:py-28 overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img src="/cta-bg.jpg" alt="" class="w-full h-full object-cover" loading="lazy" />
+    <div class="absolute inset-0 bg-[var(--color-primary-dark)]/75"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <h2 class="reveal font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
       {cta.title}
     </h2>
-    <p class="reveal stagger-1 text-base md:text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+    <p class="reveal stagger-1 text-base md:text-lg text-white/80 mb-8 max-w-xl mx-auto">
       {cta.description}
     </p>
     <a
       href={mailto}
-      class="reveal stagger-2 btn-primary inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white font-medium text-base"
+      class="reveal stagger-2 btn-primary inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white font-medium text-base border border-white/30"
       style="background: var(--color-accent)"
     >
       {cta.buttonText}
