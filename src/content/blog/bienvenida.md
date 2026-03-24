@@ -1,16 +1,13 @@
 ---
-title: "Bienvenida al blog"
-description: "Un espacio para compartir reflexiones sobre geografía, territorio y sostenibilidad."
-pubDate: 2026-03-16
+title: geografia
+description: Un espacio para compartir ref
+pubDate: 2026-03-23T22:58:00.000-05:00
+heroImage: /images/uploads/20210818_080943.jpg
 ---
-
 Este es un espacio para compartir reflexiones, análisis y experiencias sobre geografía, conservación, gestión del riesgo y gobernanza territorial.
 
-Próximamente encontrarás artículos sobre:
+ritorial
 
-- **Análisis geoespacial** aplicado a la conservación
-- **Experiencias de campo** en la Amazonía peruana
-- **Herramientas y metodologías** para el desarrollo territorial
-- **Reflexiones** sobre cambio climático y comunidades
+* **Reflexiones** sobre cambio climático y comunidades
 
 ¡Gracias por visitarme!
