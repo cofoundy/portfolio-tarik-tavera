@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Tarik Tavera Medina",
   title: "Consultor en Conservación, Gestión del Riesgo y Gobernanza Territorial en Amazonía",
   description:
-    "Geógrafo especializado en Amazonía, cambio climático y gestión del riesgo de desastres con enfoque participativo y territorial.",
+    "Geógrafo especializado en la Amazonía, con experiencia en gestión del riesgo, conservación y gobernanza territorial.",
 
   colors: {
     primaryDark: "#1b4332",
@@ -14,7 +14,7 @@ export const siteConfig = {
   },
 
   tagline:
-    "Soluciones geoespaciales y enfoques participativos para fortalecer la toma de decisiones frente a los desafíos del cambio climático en comunidades, ciudades y ecosistemas.",
+    "Barrios periféricos, parques nacionales, territorios indígenas. Son ecosistemas desiguales y poco visibles entre sí — y es precisamente esa trayectoria la que me permite entender quién es más vulnerable, por qué y qué se puede hacer. Trabajo en los puntos ciegos entre enfoques, datos y estrategias, donde la inclusión, la gobernanza y los intereses en juego no logran articularse del todo, y donde se construyen las claves para comprender los territorios.",
 
   stats: [
     { value: "+100", label: "Regiones, paisajes y comunidades" },
@@ -58,44 +58,44 @@ export const siteConfig = {
   ],
 
   // --- Soluciones Territoriales (3 pilares) ---
+  solucionesQuote:
+    "El territorio es el punto de partida: convertimos riesgo en decisiones que impulsan gobernanza inclusiva.",
+
   soluciones: [
     {
       icon: "map",
-      title: "Inteligencia Geoespacial del Territorio",
+      title: "Inteligencia Geoespacial",
+      subtitle: "Cartografías que responden preguntas para construir territorios inclusivos",
       description:
-        "Uso de herramientas de GIS para el monitoreo de los cambios y retos para la planificación y gestión territorial.",
+        "Monitoreo, análisis y cartografía del territorio",
       items: [
-        "Monitoreo satelital y análisis geoespacial del territorio",
-        "Cartografía temática y análisis espacial aplicado",
-        "Dinámicas socioambientales de los cambios en cobertura y uso del suelo",
-        "Sistemas de información geográfica para la gestión territorial",
-        "Visualización de datos territoriales y plataformas geoespaciales",
+        "Identificación de amenazas y necesidades socioambientales",
+        "Sistemas de información geográfica para la gestión del riesgo",
+        "Visualización de datos y plataformas geoespaciales",
       ],
     },
     {
       icon: "shield",
       title: "Resiliencia Climática y Gestión de Ecosistemas",
+      subtitle: "El cambio climático no afecta a todos por igual.",
       description:
-        "Evaluación de riesgos y diseño de estrategias de adaptación y resiliencia frente al cambio climático en zonas rurales, entornos urbanos y comunidades de la Amazonía.",
+        "Evaluación de riesgos socioambientales",
       items: [
-        "Evaluación de vulnerabilidad climática y riesgos socioambientales",
-        "Adaptación al cambio climático en territorios y ciudades",
-        "Sistemas de alerta temprana y monitoreo de riesgos",
-        "Planes de contingencia y resiliencia territorial",
-        "Conservación y gestión sostenible de ecosistemas",
+        "Adaptación al cambio climático en comunidades y ciudades",
+        "Sistemas de alerta temprana y monitoreo de amenazas",
+        "Planes de contingencia y gestión sostenible del territorio",
       ],
     },
     {
       icon: "people",
       title: "Gobernanza, Brechas y Vulnerabilidades",
+      subtitle: "Las vulnerabilidades no son barreras del modelo – son retos para la inclusión.",
       description:
-        "Procesos participativos para comprender brechas territoriales, fortalecer capacidades locales y promover una gobernanza más inclusiva en la gestión del territorio y los recursos.",
+        "Diagnóstico de vulnerabilidades y barreras geográficas",
       items: [
-        "Diagnóstico de vulnerabilidades y barreras",
         "Procesos participativos y co-creación de soluciones territoriales",
-        "Fortalecimiento de capacidades locales e institucionales",
         "Gobernanza territorial y gestión de conflictos socioambientales",
-        "Innovación social para la gestión sostenible del territorio",
+        "Innovación social para la valoración de los recursos naturales",
       ],
     },
   ],
@@ -116,21 +116,101 @@ export const siteConfig = {
     ],
   },
 
+  // --- Video ---
+  video: {
+    title: "¿Y la geografía?",
+    driveId: "1qSDm6VfFst5ee23TOFaOXzWY487eRHH3",
+  },
+
   // --- Portafolio de Instrumentos ---
   portafolio: {
-    title: "Portafolio de instrumentos, herramientas y mapas",
+    title: "Portafolio de consultorías",
     description:
-      "Metodologías para comprender transformaciones socioambientales y apoyar decisiones en contextos territoriales complejos.",
+      "Mapas e instrumentos para comprender los cambios del territorio y focalizar acciones según evaluación del riesgo en contextos complejos.",
     driveUrl:
       "https://drive.google.com/drive/folders/1EIGrly2QQ2O1lwa90w3VvfNWagK6SROi?usp=drive_link",
     items: [
-      { label: "DDHH", icon: "scale" },
-      { label: "Sistema de Alerta Temprana", icon: "bell" },
-      { label: "Incendios forestales", icon: "fire" },
-      { label: "Glaciares", icon: "mountain" },
-      { label: "Legacy Landscapes Fund", icon: "leaf" },
+      {
+        label: "Vulnerabilidad y Riesgo",
+        icon: "scale",
+        type: "modal",
+        url: "https://drive.google.com/file/d/1jyI1--o19x9OlVsdwKrVBtJ9Tvm3cJpD/preview",
+      },
+      {
+        label: "Paisajes y Amenazas",
+        icon: "mountain",
+        type: "link",
+        url: "https://visor-rsu.pucp.edu.pe/",
+      },
+      {
+        label: "Investigación acción-participativa",
+        icon: "people",
+        type: "link",
+        url: "https://ojo-publico.com/especiales/cartografia-de-la-desigualdad/index.html",
+      },
+      {
+        label: "Sostenibilidad",
+        icon: "leaf",
+        type: "modal",
+        url: "https://drive.google.com/file/d/1ZWAn7RKuFS2haBAO97tQi44v8dyn_aWB/preview",
+      },
+      {
+        label: "Zonas de conservación",
+        icon: "tree",
+        type: "modal",
+        url: "https://drive.google.com/file/d/169pb6uXpfkIxuGzclCqAw4s8_MWG4B71/preview",
+      },
+      { label: "DDHH", icon: "scale", type: "drive" },
+      { label: "Sistema de Alerta Temprana", icon: "bell", type: "drive" },
+      { label: "Incendios forestales", icon: "fire", type: "drive" },
+      { label: "Glaciares", icon: "mountain", type: "drive" },
+      { label: "Legacy Landscapes Fund", icon: "leaf", type: "drive" },
     ],
   },
+
+  // --- Galería ---
+  galeria: {
+    title: "En campo",
+    photos: [
+      { src: "/galeria/img1.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/img2.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/img3.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/img4.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/img5.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/wa1.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/wa2.jpg", alt: "Trabajo de campo" },
+    ],
+  },
+
+  // --- Proyectos ---
+  projects: [
+    {
+      title: "Cartografía de la Desigualdad",
+      description:
+        "Elaboración de cartografías y productos visuales sobre desigualdades en Perú para Ojo Público, difundidos en medios de comunicación.",
+      tags: ["GIS", "Cartografía", "Análisis territorial", "Visualización"],
+      url: "https://ojo-publico.com/especiales/cartografia-de-la-desigualdad/index.html",
+    },
+    {
+      title: "Visor de Responsabilidad Social — PUCP",
+      description:
+        "Plataforma de visualización geoespacial para proyectos de responsabilidad social universitaria de la PUCP-OARS.",
+      tags: ["Web mapping", "Responsabilidad social"],
+      url: "https://visor-rsu.pucp.edu.pe/",
+    },
+    {
+      title: "Programa Manu-Purús Legacy Landscapes",
+      description:
+        "Diseño de herramientas de estimación de riesgos y sistema de alerta temprana para áreas naturales protegidas con la Sociedad Zoológica de Frankfurt.",
+      tags: ["Salvaguardas", "SERNANP", "Gestión del riesgo", "DDHH"],
+    },
+    {
+      title: "Sistema de Alerta Temprana — VRAEM",
+      description:
+        "Sistema de comunicación y geolocalización de alertas para amenazas territoriales en comunidades Asháninka del Río Ene.",
+      tags: ["Alerta temprana", "Geolocalización", "Pueblos indígenas"],
+    },
+  ],
 
   // --- Trayectoria ---
   experience: [
@@ -173,21 +253,23 @@ export const siteConfig = {
       ],
     },
     {
-      company: "SERNANP",
-      title: "Analista de Áreas Naturales Protegidas",
-      dateRange: "Jun — Oct 2024",
+      company: "Central Asháninka del Río Ene (CARE)",
+      title: "Especialista en Sistemas de Alerta Temprana",
+      dateRange: "Ene — Abr 2024",
+      location: "VRAEM, Perú",
       bullets: [
-        "Fortalecimiento del Comité de Gestión del Parque Nacional Cordillera del Cóndor",
-        "Asesoría con comunidades Wampis y Awajún mediante aplicación SMART",
+        "Diseño sistema de comunicación y geolocalización de alertas para comunidades indígenas del VRAEM",
+        "Desarrollo de módulos de capacitación en gestión de emergencias para pueblos indígenas Asháninka",
       ],
     },
     {
-      company: "PUCP",
-      title: "Pre-docente",
-      dateRange: "Jul 2022 — Dic 2025",
+      company: "MINAM-SERFOR & OSINFOR",
+      title: "Especialista en Sistemas de Información Geográfica",
+      dateRange: "Jul 2020 — Dic 2023",
+      location: "Lima / Ucayali, Perú",
       bullets: [
-        "Cursos: Geografía del Transporte, Gestión de Cuencas, Población y Territorio",
-        "Material didáctico para Dra. Nicole Bernex y Dr. Pablo Vega Centeno",
+        "Elaboró cartografía de zonificación forestal de Ucayali, contribuyendo a la gestión sostenible de más de 10 millones de hectáreas",
+        "Supervisó concesiones forestales mediante análisis geoespacial para OSINFOR",
       ],
     },
   ],

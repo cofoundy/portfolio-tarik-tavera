@@ -1,6 +1,5 @@
 ---
 import { siteConfig } from "../config";
-const initials = siteConfig.name.split(" ").map(n => n[0]).join("").slice(0, 2);
 const sections = [
   { id: "sobre", label: "Sobre mí" },
   { id: "soluciones", label: "Soluciones" },
@@ -16,8 +15,8 @@ const blogLink = "/blog/";
 <!-- Top bar nav -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-surface-light)]/90 backdrop-blur-sm border-b border-[var(--color-primary)]/10">
   <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-    <a href="#" class="font-serif text-xl font-bold tracking-wide" style={`color: var(--color-primary-dark)`}>
-      — {initials}
+    <a href="#" class="flex items-center gap-2">
+      <img src="/logo-eya.jpg" alt="espacio y análisis" class="h-9 w-auto" />
     </a>
 
     <!-- Desktop links -->

@@ -13,17 +13,22 @@ const icons: Record<string, string> = {
     <h2 class="reveal font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: var(--color-primary-dark)">
       Soluciones territoriales
     </h2>
-    <p class="reveal stagger-1 text-base md:text-lg text-gray-600 mb-12 max-w-2xl">
-      frente a la sostenibilidad
-    </p>
+
+    <!-- Quote -->
+    <blockquote class="reveal stagger-1 mb-12 max-w-3xl">
+      <p class="text-base md:text-lg italic leading-relaxed" style="color: var(--color-accent)">
+        "{siteConfig.solucionesQuote}"
+      </p>
+    </blockquote>
 
     <div class="grid md:grid-cols-3 gap-6 md:gap-8">
       {siteConfig.soluciones.map((sol, i) => (
         <div class={`reveal stagger-${i + 2} card-lift bg-white rounded-xl p-6 md:p-8 border border-[var(--color-primary)]/10`}>
           <div class="mb-4" style="color: var(--color-primary)" set:html={icons[sol.icon] || icons.map} />
-          <h3 class="font-serif text-xl md:text-2xl font-bold mb-3" style="color: var(--color-primary-dark)">
+          <h3 class="font-serif text-xl md:text-2xl font-bold mb-2" style="color: var(--color-primary-dark)">
             {sol.title}
           </h3>
+          <p class="text-sm italic mb-3" style="color: var(--color-accent)">{sol.subtitle}</p>
           <p class="text-sm text-gray-600 mb-4 leading-relaxed">{sol.description}</p>
           <ul class="space-y-2">
             {sol.items.map(item => (

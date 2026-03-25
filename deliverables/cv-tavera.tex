@@ -1,0 +1,204 @@
+% Harvard-Format Professional CV — Tarik Naghib Tavera Medina
+% Compile with: xelatex cv-tavera.tex
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.6in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+% --- Fonts ---
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica Neue}
+
+% --- Colors ---
+\definecolor{headrule}{HTML}{2c3e50}
+\definecolor{linkblue}{HTML}{1a5276}
+
+% --- Hyperlinks ---
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue, pdfborder={0 0 0}}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\large\bfseries\centering}
+  {}
+  {0em}
+  {\vspace{-0.4em}\hrulefill\quad}[\quad\hrulefill\vspace{-0.4em}]
+\titlespacing{\section}{0pt}{0.6em}{0.3em}
+
+% --- List Formatting ---
+\setlist[itemize]{nosep, left=0pt, label=\textbullet, itemsep=1pt, topsep=2pt}
+
+% --- No page numbers ---
+\pagestyle{empty}
+
+% --- Custom Commands ---
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \par\nopagebreak
+  \textit{#3} \hfill \textit{#4} \par\nopagebreak
+}
+
+\begin{document}
+
+% ============================================
+% HEADER
+% ============================================
+\begin{center}
+  {\LARGE\bfseries Tarik Naghib Tavera Medina} \\[4pt]
+  \faIcon{map-marker-alt}\enspace Lima, Per\'u
+  \quad\faIcon{envelope}\enspace \href{mailto:geotariktavera@gmail.com}{geotariktavera@gmail.com}
+  \\[2pt]
+  \faIcon{linkedin}\enspace \href{https://www.linkedin.com/in/tariktaveramedina}{linkedin.com/in/tariktaveramedina}
+  \quad\faIcon{globe}\enspace \href{https://tarik-tavera.cofoundy.dev}{tarik-tavera.cofoundy.dev}
+\end{center}
+
+\vspace{-0.4em}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-0.8em}
+
+% ============================================
+% EXPERIENCIA PROFESIONAL
+% ============================================
+\section{Experiencia Profesional}
+
+\entry{CLAC --- Comercio Justo}{Remoto (El Salvador)}{Analista de Datos de Deforestaci\'on}{Oct 2024 --- Presente}
+\begin{itemize}
+  \item Fortaleci\'o capacidades de cooperativas peruanas en San Ignacio, VRAEM y Puno ante la normativa EUDR de la Uni\'on Europea, alcanzando a m\'as de 200 productores
+  \item Implement\'o herramientas de monitoreo de deforestaci\'on para peque\~na agricultura, cubriendo 3 regiones productivas clave
+  \item Dise\~n\'o material audiovisual sobre herramientas agroclim\'aticas y Comercio Justo para difusi\'on en redes de cooperativas
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Frankfurt Zoological Society (FZS Per\'u)}{Lima, Per\'u}{Especialista en Salvaguardas y Gesti\'on del Riesgo}{Sep 2025 --- Mar 2026}
+\begin{itemize}
+  \item Dise\~n\'o herramientas de estimaci\'on de riesgos para el programa Manu-Pur\'us Legacy Landscapes, abarcando 2 parques nacionales
+  \item Asesor\'o a SERNANP en gobernanza y gesti\'on efectiva de \'areas naturales protegidas en la regi\'on amaz\'onica
+  \item Desarroll\'o un Sistema de Alerta Temprana con enfoque de derechos humanos y conservaci\'on para comunidades del paisaje Manu-Pur\'us
+\end{itemize}
+\vspace{0.3em}
+
+\entry{INAIGEM}{\'Ancash, Per\'u}{Especialista en Temas Socioculturales}{Jun --- Oct 2025}
+\begin{itemize}
+  \item Analiz\'o conocimientos tradicionales sobre glaciares y lagunas en comunidades alto-andinas de \'Ancash
+  \item Elabor\'o recomendaciones t\'ecnicas para la conservaci\'on de ecosistemas glaciares integrando saberes locales
+\end{itemize}
+\vspace{0.3em}
+
+\entry{CARE Per\'u}{Chachapoyas, Per\'u}{Especialista en Gesti\'on del Riesgo}{Oct --- Dic 2024}
+\begin{itemize}
+  \item Elabor\'o Plan de Contingencia ante Incendios Forestales para la ciudad de Chachapoyas y su entorno rural
+  \item Lider\'o componente geogr\'afico del proyecto ``Guardianas del Cambio'' con enfoque interseccional de g\'enero
+\end{itemize}
+\vspace{0.3em}
+
+\entry{SERNANP}{Condorcanqui, Amazonas}{Analista de \'Areas Naturales Protegidas}{Jun --- Oct 2024}
+\begin{itemize}
+  \item Fortaleci\'o el Comit\'e de Gesti\'on del Parque Nacional Cordillera del C\'ondor mediante facilitaci\'on participativa
+  \item Brind\'o asesor\'ia t\'ecnica a comunidades Wampis y Awaj\'un del r\'io Santiago usando la aplicaci\'on SMART
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Central Ash\'aninka del R\'io Ene (CARE)}{VRAEM, Per\'u}{Especialista en Sistemas de Alerta Temprana}{Ene --- Abr 2024}
+\begin{itemize}
+  \item Dise\~n\'o sistema de comunicaci\'on y geolocalizaci\'on de alertas para comunidades ind\'igenas del VRAEM
+  \item Desarroll\'o m\'odulos de capacitaci\'on en gesti\'on de emergencias para pueblos ind\'igenas Ash\'aninka
+\end{itemize}
+\vspace{0.3em}
+
+\entry{OIM --- Organizaci\'on Internacional para las Migraciones}{Lima, Per\'u}{Especialista en Sistemas de Informaci\'on Geogr\'afica}{Mar --- Abr 2024}
+\begin{itemize}
+  \item Dise\~n\'o metodolog\'ia para evaluaci\'on de vulnerabilidad de albergues ante riesgos de desastres
+  \item Desarroll\'o herramienta m\'ovil de inspecci\'on para relevamiento de infraestructura humanitaria
+\end{itemize}
+\vspace{0.3em}
+
+\entry{PUCP --- Pontificia Universidad Cat\'olica del Per\'u}{Lima, Per\'u}{Pre-docente del Departamento de Humanidades}{Jul 2022 --- Dic 2025}
+\begin{itemize}
+  \item Imparti\'o cursos de Geograf\'ia del Transporte, Gesti\'on de Cuencas Hidrogr\'aficas y Poblaci\'on y Territorio
+  \item Elabor\'o material did\'actico y dirigi\'o trabajo de campo para c\'atedras de la Dra. Bernex y el Dr. Vega Centeno
+\end{itemize}
+\vspace{0.3em}
+
+\entry{MINAM-SERFOR \& OSINFOR}{Lima / Ucayali, Per\'u}{Especialista en Sistemas de Informaci\'on Geogr\'afica}{Jul 2020 --- Dic 2023}
+\begin{itemize}
+  \item Elabor\'o cartograf\'ia de zonificaci\'on forestal de Ucayali, contribuyendo a la gesti\'on sostenible de m\'as de 10 millones de hect\'areas
+  \item Supervis\'o concesiones forestales mediante an\'alisis geoespacial para OSINFOR
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Espacio \& An\'alisis}{Lima, Per\'u}{Coordinador de Proyectos}{Mar 2020 --- Dic 2023}
+\begin{itemize}
+  \item Lider\'o an\'alisis territorial sobre residuos en Pamplona Alta y vulnerabilidad clim\'atica para PUCP-DARS
+  \item Produjo cartograf\'ias de la desigualdad para Ojo P\'ublico, alcanzando audiencia de 500K+ lectores en l\'inea
+\end{itemize}
+\vspace{0.3em}
+
+\entry{INTE-PUCP}{Lima, Per\'u}{Investigador Junior}{Ene 2016 --- Dic 2019}
+\begin{itemize}
+  \item Public\'o 3 art\'iculos cient\'ificos sobre espacio p\'ublico, bosques tropicales y pol\'iticas ambientales en revistas indexadas
+  \item Desarroll\'o metodolog\'ia mixta para an\'alisis de im\'agenes satelitales aplicada a estudios socioambientales
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% EDUCACI\'ON
+% ============================================
+\section{Educaci\'on}
+
+\entry{Pontificia Universidad Cat\'olica del Per\'u (PUCP)}{Lima, Per\'u}{Ge\'ografo --- Licenciado, Colegiado}{2014 --- 2020}
+\begin{itemize}
+  \item Tercio superior. Tesis: ``Del istmo de Fitzcarrald a La Pampa: an\'alisis del sistema de redes de ciudades mineras de Madre de Dios''
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Housing \& Urban Dev. Corp --- Beca ITEC}{Delhi, India}{Gesti\'on de Asentamientos Humanos}{Ene --- Feb 2023}
+\begin{itemize}
+  \item Programa de Cooperaci\'on T\'ecnica y Econ\'omica de la India (ITEC)
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Universidad Polit\'ecnica de Catalunya}{Barcelona, Espa\~na}{Intercambio Acad\'emico --- EPSEB}{Sep 2017 --- Feb 2018}
+\vspace{0.3em}
+
+% ============================================
+% PUBLICACIONES
+% ============================================
+\section{Publicaciones Acad\'emicas}
+
+\begin{itemize}
+  \item Tavera et al. (2018). ``The importance of the study and analysis of Santiago de Surco parks from the perspective of urban geography.'' \textit{Espacio y Desarrollo}, (31). PUCP.
+  \item Dunin Borkowski et al. (2022). ``From national forest to forest concessions: a socio-environmental analysis of land use change in Ucayali.'' \textit{Espacio y Desarrollo}, (39). PUCP.
+  \item Vega Centeno et al. (2022). ``Looking at Vila Ol\'impia with Peruvian eyes.'' \textit{Ponto Urbe}, USP.
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% PREMIOS Y BECAS
+% ============================================
+\section{Premios y Becas}
+
+\begin{itemize}
+  \item Fondo CIAC semilla ``100 a\~nos de Barriada'' --- PUCP (2024)
+  \item Beca ITEC --- Cooperaci\'on T\'ecnica India (2023)
+  \item Beca PREDES --- Gesti\'on del Riesgo de Desastres (2023)
+  \item Beca TReeS UK --- Tambopata Reserve Society (2018)
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% HABILIDADES
+% ============================================
+\section{Habilidades y Competencias}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{T\'ecnicas:} & GIS (Google Earth Engine, QGIS, ArcGIS), Teledetecci\'on, RPAS (Piloto licenciado MTC), KoboCollect, Power BI, Big Data geoespacial, Cartograf\'ia tem\'atica, Ortofotos \\
+\textbf{Idiomas:} & Espa\~nol (nativo), Ingl\'es (fluido --- British English) \\
+\textbf{Transversales:} & Facilitaci\'on participativa, coordinaci\'on interinstitucional, docencia universitaria, liderazgo de proyectos, salvaguardas socioambientales \\
+\end{tabularx}
+
+\end{document}

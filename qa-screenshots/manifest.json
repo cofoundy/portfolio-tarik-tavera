@@ -1,0 +1,174 @@
+{
+  "url": "https://tarik-tavera.cofoundy.dev",
+  "timestamp": "2026-03-25T18:09:48.161Z",
+  "desktop": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "full": {
+      "file": "desktop-full.png",
+      "fileSize": "1001KB"
+    },
+    "sections": [
+      {
+        "file": "desktop-hero.png",
+        "section": "hero",
+        "height": 775,
+        "fileSize": "253KB"
+      },
+      {
+        "file": "desktop-sobre.png",
+        "section": "sobre",
+        "height": 821,
+        "fileSize": "123KB"
+      },
+      {
+        "file": "desktop-soluciones.png",
+        "section": "soluciones",
+        "height": 798,
+        "fileSize": "125KB"
+      },
+      {
+        "file": "desktop-amazonia.png",
+        "section": "amazonia",
+        "height": 894,
+        "fileSize": "66KB"
+      },
+      {
+        "file": "desktop-video.png",
+        "section": "video",
+        "height": 749,
+        "fileSize": "14KB"
+      },
+      {
+        "file": "desktop-portafolio.png",
+        "section": "portafolio",
+        "height": 641,
+        "fileSize": "58KB"
+      },
+      {
+        "file": "desktop-galeria.png",
+        "section": "galeria",
+        "height": 312,
+        "fileSize": "25KB"
+      },
+      {
+        "file": "desktop-trayectoria.png",
+        "section": "trayectoria",
+        "height": 1542,
+        "fileSize": "185KB"
+      },
+      {
+        "file": "desktop-publicaciones.png",
+        "section": "publicaciones",
+        "height": 718,
+        "fileSize": "57KB"
+      },
+      {
+        "file": "desktop-formacion.png",
+        "section": "formacion",
+        "height": 548,
+        "fileSize": "76KB"
+      },
+      {
+        "file": "desktop-contacto.png",
+        "section": "contacto",
+        "height": 430,
+        "fileSize": "24KB"
+      },
+      {
+        "file": "desktop-footer-11.png",
+        "section": "footer-11",
+        "height": 221,
+        "fileSize": "14KB"
+      }
+    ],
+    "pageHeight": 9192
+  },
+  "mobile": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "full": {
+      "file": "mobile-full.png",
+      "fileSize": "803KB"
+    },
+    "sections": [
+      {
+        "file": "mobile-hero.png",
+        "section": "hero",
+        "height": 987,
+        "fileSize": "154KB"
+      },
+      {
+        "file": "mobile-sobre.png",
+        "section": "sobre",
+        "height": 1203,
+        "fileSize": "108KB"
+      },
+      {
+        "file": "mobile-soluciones.png",
+        "section": "soluciones",
+        "height": 1495,
+        "fileSize": "108KB"
+      },
+      {
+        "file": "mobile-amazonia.png",
+        "section": "amazonia",
+        "height": 806,
+        "fileSize": "46KB"
+      },
+      {
+        "file": "mobile-video.png",
+        "section": "video",
+        "height": 380,
+        "fileSize": "7KB"
+      },
+      {
+        "file": "mobile-portafolio.png",
+        "section": "portafolio",
+        "height": 1097,
+        "fileSize": "56KB"
+      },
+      {
+        "file": "mobile-galeria.png",
+        "section": "galeria",
+        "height": 252,
+        "fileSize": "12KB"
+      },
+      {
+        "file": "mobile-trayectoria.png",
+        "section": "trayectoria",
+        "height": 2065,
+        "fileSize": "163KB"
+      },
+      {
+        "file": "mobile-publicaciones.png",
+        "section": "publicaciones",
+        "height": 814,
+        "fileSize": "51KB"
+      },
+      {
+        "file": "mobile-formacion.png",
+        "section": "formacion",
+        "height": 848,
+        "fileSize": "68KB"
+      },
+      {
+        "file": "mobile-contacto.png",
+        "section": "contacto",
+        "height": 346,
+        "fileSize": "16KB"
+      },
+      {
+        "file": "mobile-footer-11.png",
+        "section": "footer-11",
+        "height": 265,
+        "fileSize": "13KB"
+      }
+    ],
+    "pageHeight": 11037
+  }
+}

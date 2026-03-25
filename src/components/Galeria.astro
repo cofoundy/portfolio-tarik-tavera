@@ -1,0 +1,59 @@
+---
+import { siteConfig } from "../config";
+const { galeria } = siteConfig;
+---
+
+<section id="galeria" class="py-16 md:py-24" style="background-color: var(--color-surface)">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="reveal font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-10" style="color: var(--color-primary-dark)">
+      {galeria.title}
+    </h2>
+
+    <!-- Masonry-style grid -->
+    <div class="columns-2 md:columns-3 gap-4 space-y-4">
+      {galeria.photos.map((photo, i) => (
+        <div class={`reveal stagger-${Math.min(i + 1, 6)} break-inside-avoid overflow-hidden rounded-xl shadow-md cursor-pointer galeria-item`}>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="galeria-lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm items-center justify-center p-4" style="display:none">
+  <button id="lightbox-close" class="absolute top-4 right-4 p-2 text-white/70 hover:text-white z-10" aria-label="Cerrar">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <img id="lightbox-img" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg" alt="" />
+</div>
+
+<script>
+  const lightbox = document.getElementById('galeria-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+
+  document.querySelectorAll('.galeria-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (img && lightboxImg && lightbox) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    if (lightbox) { lightbox.style.display = 'none'; document.body.style.overflow = ''; }
+  }
+
+  document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+</script>

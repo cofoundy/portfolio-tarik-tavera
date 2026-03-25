@@ -30,7 +30,10 @@ import { siteConfig } from "../config";
                   {exp.dateRange}
                 </span>
               </div>
-              <p class="text-sm font-medium text-gray-500 mb-3">{exp.title}</p>
+              <p class="text-sm font-medium text-gray-500 mb-1">{exp.title}</p>
+              {exp.location && (
+                <p class="text-xs text-gray-400 mb-3">{exp.location}</p>
+              )}
               <ul class="space-y-1.5">
                 {exp.bullets.map(bullet => (
                   <li class="flex items-start gap-2 text-sm text-gray-700 leading-relaxed">

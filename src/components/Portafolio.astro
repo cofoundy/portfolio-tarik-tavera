@@ -8,7 +8,13 @@ const iconMap: Record<string, string> = {
   fire: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/></svg>',
   mountain: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21l6.75-9.75L12 15l3-4.5L21 21H3z"/></svg>',
   leaf: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-4-8-7.5-8-12a8 8 0 0116 0c0 4.5-4 8-8 12z"/></svg>',
+  tree: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-6m0 0l-3-3m3 3l3-3m-6-3l-3-3 3-3 3 3 3-3 3 3-3 3"/></svg>',
+  people: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>',
 };
+
+const modalItems = portafolio.items.filter(i => i.type === "modal");
+const linkItems = portafolio.items.filter(i => i.type === "link");
+const driveItems = portafolio.items.filter(i => i.type === "drive");
 ---
 
 <section id="portafolio" class="py-16 md:py-24" style="background-color: var(--color-surface)">
@@ -20,11 +26,40 @@ const iconMap: Record<string, string> = {
       {portafolio.description}
     </p>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-      {portafolio.items.map((item, i) => (
-        <div class={`reveal stagger-${i + 1} card-lift flex flex-col items-center justify-center gap-3 p-6 bg-white rounded-xl border border-[var(--color-primary)]/10 text-center`}>
-          <div style="color: var(--color-primary)" set:html={iconMap[item.icon] || iconMap.leaf} />
-          <span class="text-sm font-medium" style="color: var(--color-primary-dark)">{item.label}</span>
+    <!-- Primary items (modals + links) -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+      {[...modalItems, ...linkItems].map((item, i) => {
+        const isModal = item.type === "modal";
+        return (
+          <button
+            class={`reveal stagger-${Math.min(i + 1, 6)} card-lift flex flex-col items-center justify-center gap-3 p-6 bg-white rounded-xl border border-[var(--color-primary)]/10 text-center cursor-pointer w-full`}
+            data-action={isModal ? "open-modal" : "open-link"}
+            data-url={item.url}
+            data-label={item.label}
+          >
+            <div style="color: var(--color-primary)" set:html={iconMap[item.icon] || iconMap.leaf} />
+            <span class="text-sm font-medium" style="color: var(--color-primary-dark)">{item.label}</span>
+            {isModal && (
+              <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full" style="background: var(--color-primary); color: white; opacity: 0.8">
+                Ver mapa
+              </span>
+            )}
+            {!isModal && (
+              <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border" style="border-color: var(--color-primary); color: var(--color-primary); opacity: 0.7">
+                Explorar
+              </span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+
+    <!-- Secondary items (drive folder) -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+      {driveItems.map((item, i) => (
+        <div class={`reveal stagger-${Math.min(i + 1, 6)} flex items-center gap-2 p-3 bg-white/60 rounded-lg border border-[var(--color-primary)]/5`}>
+          <div class="shrink-0" style="color: var(--color-primary); opacity: 0.6" set:html={iconMap[item.icon] || iconMap.leaf} />
+          <span class="text-xs font-medium text-gray-600">{item.label}</span>
         </div>
       ))}
     </div>
@@ -43,3 +78,48 @@ const iconMap: Record<string, string> = {
     </div>
   </div>
 </section>
+
+<!-- Modal overlay -->
+<div id="portafolio-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" style="display:none">
+  <div class="relative w-full max-w-5xl h-[80vh] bg-white rounded-2xl overflow-hidden shadow-2xl">
+    <div class="flex items-center justify-between px-5 py-3 border-b" style="background: var(--color-surface)">
+      <h3 id="modal-title" class="font-serif text-lg font-bold" style="color: var(--color-primary-dark)"></h3>
+      <button id="modal-close" class="p-2 rounded-full hover:bg-gray-200 transition-colors" aria-label="Cerrar">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <iframe id="modal-iframe" class="w-full h-[calc(100%-52px)]" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('portafolio-modal');
+  const iframe = document.getElementById('modal-iframe') as HTMLIFrameElement;
+  const title = document.getElementById('modal-title');
+
+  document.querySelectorAll('[data-action="open-modal"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const url = btn.getAttribute('data-url');
+      const label = btn.getAttribute('data-label');
+      if (iframe && url) iframe.src = url;
+      if (title && label) title.textContent = label;
+      if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    });
+  });
+
+  document.querySelectorAll('[data-action="open-link"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const url = btn.getAttribute('data-url');
+      if (url) window.open(url, '_blank');
+    });
+  });
+
+  document.getElementById('modal-close')?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  function closeModal() {
+    if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
+    if (iframe) iframe.src = '';
+  }
+</script>
