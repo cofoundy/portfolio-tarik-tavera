@@ -64,6 +64,15 @@ function formatDate(date: Date) {
           {post.data.title}
         </h1>
 
+        {post.data.heroImage && (
+          <img
+            src={post.data.heroImage}
+            alt={post.data.title}
+            class="w-full rounded-xl mb-8 shadow-md"
+            loading="eager"
+          />
+        )}
+
         <div class="h-px mb-8" style="background: var(--color-primary); opacity: 0.15"></div>
 
         <div class="prose prose-lg max-w-none

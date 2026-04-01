@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Tarik Tavera Medina",
-  title: "Consultor en Conservación, Gestión del Riesgo y Gobernanza Territorial en Amazonía",
+  title: "Geógrafo especializado en la Amazonía, con experiencia en gestión del riesgo, conservación y gobernanza territorial.",
   description:
     "Geógrafo especializado en la Amazonía, con experiencia en gestión del riesgo, conservación y gobernanza territorial.",
 
@@ -12,9 +12,6 @@ export const siteConfig = {
     surface: "#f2ede6",
     surfaceLight: "#f8f5f0",
   },
-
-  tagline:
-    "Barrios periféricos, parques nacionales, territorios indígenas. Son ecosistemas desiguales y poco visibles entre sí — y es precisamente esa trayectoria la que me permite entender quién es más vulnerable, por qué y qué se puede hacer. Trabajo en los puntos ciegos entre enfoques, datos y estrategias, donde la inclusión, la gobernanza y los intereses en juego no logran articularse del todo, y donde se construyen las claves para comprender los territorios.",
 
   stats: [
     { value: "+100", label: "Regiones, paisajes y comunidades" },
@@ -30,8 +27,7 @@ export const siteConfig = {
 
   // --- About ---
   quote: {
-    text: "El diálogo entre lo urbano, la conservación y la agricultura me ha permitido comprender cómo la geografía permite reconocer las desigualdades territoriales y las vulnerabilidades de quienes los habitan.",
-    author: "Tarik Tavera",
+    text: "La Amazonia no es solo bosques en riesgo: es una disputa por poder, recursos y derechos, donde unos explotan y otros resisten.",
   },
 
   aboutMe:
@@ -66,8 +62,7 @@ export const siteConfig = {
       icon: "map",
       title: "Inteligencia Geoespacial",
       subtitle: "Cartografías que responden preguntas para construir territorios inclusivos",
-      description:
-        "Monitoreo, análisis y cartografía del territorio",
+      description: "Monitoreo, análisis y cartografía del territorio",
       items: [
         "Identificación de amenazas y necesidades socioambientales",
         "Sistemas de información geográfica para la gestión del riesgo",
@@ -78,8 +73,7 @@ export const siteConfig = {
       icon: "shield",
       title: "Resiliencia Climática y Gestión de Ecosistemas",
       subtitle: "El cambio climático no afecta a todos por igual.",
-      description:
-        "Evaluación de riesgos socioambientales",
+      description: "Evaluación de riesgos socioambientales",
       items: [
         "Adaptación al cambio climático en comunidades y ciudades",
         "Sistemas de alerta temprana y monitoreo de amenazas",
@@ -90,8 +84,7 @@ export const siteConfig = {
       icon: "people",
       title: "Gobernanza, Brechas y Vulnerabilidades",
       subtitle: "Las vulnerabilidades no son barreras del modelo – son retos para la inclusión.",
-      description:
-        "Diagnóstico de vulnerabilidades y barreras geográficas",
+      description: "Diagnóstico de vulnerabilidades y barreras geográficas",
       items: [
         "Procesos participativos y co-creación de soluciones territoriales",
         "Gobernanza territorial y gestión de conflictos socioambientales",
@@ -118,11 +111,11 @@ export const siteConfig = {
 
   // --- Video ---
   video: {
-    title: "¿Y la geografía?",
+    title: "¿Y la geografía? — Territorios desiguales",
     driveId: "1qSDm6VfFst5ee23TOFaOXzWY487eRHH3",
   },
 
-  // --- Portafolio de Instrumentos ---
+  // --- Portafolio de Consultorías ---
   portafolio: {
     title: "Portafolio de consultorías",
     description:
@@ -134,11 +127,11 @@ export const siteConfig = {
         label: "Vulnerabilidad y Riesgo",
         icon: "scale",
         type: "modal",
-        url: "https://drive.google.com/file/d/1jyI1--o19x9OlVsdwKrVBtJ9Tvm3cJpD/preview",
+        url: "https://drive.google.com/file/d/17nMG7hYjIzrdtzsO_6MrBg7ZPGbtGibf/preview",
       },
       {
-        label: "Paisajes y Amenazas",
-        icon: "mountain",
+        label: "Sostenibilidad",
+        icon: "leaf",
         type: "link",
         url: "https://visor-rsu.pucp.edu.pe/",
       },
@@ -149,22 +142,22 @@ export const siteConfig = {
         url: "https://ojo-publico.com/especiales/cartografia-de-la-desigualdad/index.html",
       },
       {
-        label: "Sostenibilidad",
-        icon: "leaf",
-        type: "modal",
-        url: "https://drive.google.com/file/d/1ZWAn7RKuFS2haBAO97tQi44v8dyn_aWB/preview",
-      },
-      {
         label: "Zonas de conservación",
         icon: "tree",
-        type: "modal",
-        url: "https://drive.google.com/file/d/169pb6uXpfkIxuGzclCqAw4s8_MWG4B71/preview",
+        type: "link",
+        url: "https://drive.google.com/file/d/1ZWAn7RKuFS2haBAO97tQi44v8dyn_aWB/view",
       },
-      { label: "DDHH", icon: "scale", type: "drive" },
-      { label: "Sistema de Alerta Temprana", icon: "bell", type: "drive" },
-      { label: "Incendios forestales", icon: "fire", type: "drive" },
-      { label: "Glaciares", icon: "mountain", type: "drive" },
-      { label: "Legacy Landscapes Fund", icon: "leaf", type: "drive" },
+      {
+        label: "Paisajes y Amenazas",
+        icon: "mountain",
+        type: "modal",
+        url: "https://drive.google.com/file/d/17nMG7hYjIzrdtzsO_6MrBg7ZPGbtGibf/preview",
+      },
+      { label: "Salvaguardias (+30 comunidades nativas)", icon: "shield", type: "stat" },
+      { label: "Productividad (+50 técnicos de Comercio Justo)", icon: "chart", type: "stat" },
+      { label: "Bosques y ciudades (+5 años investigando)", icon: "tree", type: "stat" },
+      { label: "Gobernanza (+4 parques nacionales)", icon: "building", type: "stat" },
+      { label: "Metodología (+10 herramientas)", icon: "tools", type: "stat" },
     ],
   },
 
@@ -174,11 +167,10 @@ export const siteConfig = {
     photos: [
       { src: "/galeria/img1.jpg", alt: "Trabajo de campo" },
       { src: "/galeria/img2.jpg", alt: "Trabajo de campo" },
-      { src: "/galeria/img3.jpg", alt: "Trabajo de campo" },
-      { src: "/galeria/img4.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/replace-mid.jpg", alt: "Trabajo de campo" },
+      { src: "/galeria/replace-other.jpg", alt: "Trabajo de campo" },
       { src: "/galeria/img5.jpg", alt: "Trabajo de campo" },
       { src: "/galeria/wa1.jpg", alt: "Trabajo de campo" },
-      { src: "/galeria/wa2.jpg", alt: "Trabajo de campo" },
     ],
   },
 
