@@ -4,7 +4,7 @@ backend:
   branch: main
   base_url: https://decap-oauth-proxy-production.up.railway.app
 
-site_url: https://tarik-tavera.cofoundy.dev
+site_url: https://tariktavera.com
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"

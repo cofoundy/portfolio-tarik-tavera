@@ -1,6 +1,6 @@
 {
   "url": "https://tarik-tavera.cofoundy.dev",
-  "timestamp": "2026-04-14T19:49:36.504Z",
+  "timestamp": "2026-04-14T19:53:01.698Z",
   "desktop": {
     "viewport": {
       "width": 1280,
@@ -8,7 +8,7 @@
     },
     "full": {
       "file": "desktop-full.png",
-      "fileSize": "2576KB"
+      "fileSize": "2730KB"
     },
     "sections": [
       {
@@ -33,7 +33,7 @@
         "file": "desktop-amazonia.png",
         "section": "amazonia",
         "height": 968,
-        "fileSize": "599KB"
+        "fileSize": "590KB"
       },
       {
         "file": "desktop-portafolio.png",
@@ -44,8 +44,8 @@
       {
         "file": "desktop-galeria.png",
         "section": "galeria",
-        "height": 1011,
-        "fileSize": "1157KB"
+        "height": 1039,
+        "fileSize": "1307KB"
       },
       {
         "file": "desktop-trayectoria.png",
@@ -57,7 +57,7 @@
         "file": "desktop-publicaciones.png",
         "section": "publicaciones",
         "height": 828,
-        "fileSize": "83KB"
+        "fileSize": "64KB"
       },
       {
         "file": "desktop-formacion.png",
@@ -75,10 +75,10 @@
         "file": "desktop-footer-10.png",
         "section": "footer-10",
         "height": 221,
-        "fileSize": "17KB"
+        "fileSize": "15KB"
       }
     ],
-    "pageHeight": 8220
+    "pageHeight": 8248
   },
   "mobile": {
     "viewport": {
@@ -124,19 +124,19 @@
         "file": "mobile-galeria.png",
         "section": "galeria",
         "height": 244,
-        "fileSize": "2KB"
+        "fileSize": "5KB"
       },
       {
         "file": "mobile-trayectoria.png",
         "section": "trayectoria",
         "height": 1833,
-        "fileSize": "148KB"
+        "fileSize": "147KB"
       },
       {
         "file": "mobile-publicaciones.png",
         "section": "publicaciones",
         "height": 1278,
-        "fileSize": "53KB"
+        "fileSize": "54KB"
       },
       {
         "file": "mobile-formacion.png",
@@ -157,6 +157,6 @@
         "fileSize": "14KB"
       }
     ],
-    "pageHeight": 11006
+    "pageHeight": 11044
   }
 }
