@@ -10,16 +10,17 @@ const { video } = siteConfig;
     </h2>
 
     <div class="reveal stagger-1 flex justify-center">
-      <div class="w-full max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg border border-[var(--color-primary)]/10 aspect-[9/16]">
+      <div class="w-full max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg border border-[var(--color-primary)]/10 aspect-[9/16] bg-[var(--color-surface)]">
         <iframe
-          src={`https://drive.google.com/file/d/${video.driveId}/preview`}
+          src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&modestbranding=1&playsinline=1`}
           width="100%"
           height="100%"
-          allow="autoplay"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           class="w-full h-full"
           loading="lazy"
           title={video.title}
+          style="border:0"
         ></iframe>
       </div>
     </div>

@@ -83,28 +83,48 @@ const statItems = portafolio.items.filter(i => i.type === "stat");
 
 <!-- Modal overlay -->
 <div id="portafolio-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" style="display:none">
-  <div class="relative w-full max-w-5xl h-[80vh] bg-white rounded-2xl overflow-hidden shadow-2xl">
+  <div class="relative w-full max-w-5xl h-[80vh] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col">
     <div class="flex items-center justify-between px-5 py-3 border-b" style="background: var(--color-surface)">
       <h3 id="modal-title" class="font-serif text-lg font-bold" style="color: var(--color-primary-dark)"></h3>
       <button id="modal-close" class="p-2 rounded-full hover:bg-gray-200 transition-colors" aria-label="Cerrar">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <iframe id="modal-iframe" class="w-full h-[calc(100%-52px)]" frameborder="0" allowfullscreen></iframe>
+    <iframe id="modal-iframe" class="w-full flex-1 hidden" frameborder="0" allowfullscreen></iframe>
+    <div id="modal-image-wrap" class="w-full flex-1 hidden items-center justify-center overflow-auto p-4" style="background: var(--color-surface)">
+      <img id="modal-image" class="max-w-full max-h-full object-contain" alt="" />
+    </div>
   </div>
 </div>
 
 <script>
   const modal = document.getElementById('portafolio-modal');
   const iframe = document.getElementById('modal-iframe') as HTMLIFrameElement;
+  const imageWrap = document.getElementById('modal-image-wrap');
+  const image = document.getElementById('modal-image') as HTMLImageElement;
   const title = document.getElementById('modal-title');
+
+  const isImage = (url: string) => /\.(jpg|jpeg|png|webp|gif|svg)(\?|$)/i.test(url);
 
   document.querySelectorAll('[data-action="open-modal"]').forEach(btn => {
     btn.addEventListener('click', () => {
       const url = btn.getAttribute('data-url');
       const label = btn.getAttribute('data-label');
-      if (iframe && url) iframe.src = url;
       if (title && label) title.textContent = label;
+      if (url) {
+        if (isImage(url)) {
+          if (iframe) { iframe.classList.add('hidden'); iframe.src = ''; }
+          if (imageWrap && image) {
+            image.src = url;
+            image.alt = label || '';
+            imageWrap.classList.remove('hidden');
+            imageWrap.classList.add('flex');
+          }
+        } else {
+          if (imageWrap) { imageWrap.classList.add('hidden'); imageWrap.classList.remove('flex'); }
+          if (iframe) { iframe.src = url; iframe.classList.remove('hidden'); }
+        }
+      }
       if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
     });
   });
@@ -123,5 +143,6 @@ const statItems = portafolio.items.filter(i => i.type === "stat");
   function closeModal() {
     if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
     if (iframe) iframe.src = '';
+    if (image) image.src = '';
   }
 </script>

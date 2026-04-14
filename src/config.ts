@@ -112,7 +112,7 @@ export const siteConfig = {
   // --- Video ---
   video: {
     title: "¿Y la geografía? — Territorios desiguales",
-    driveId: "1qSDm6VfFst5ee23TOFaOXzWY487eRHH3",
+    youtubeId: "yFPKvhFxgjM",
   },
 
   // --- Portafolio de Consultorías ---
@@ -127,7 +127,7 @@ export const siteConfig = {
         label: "Vulnerabilidad y Riesgo",
         icon: "scale",
         type: "modal",
-        url: "https://drive.google.com/file/d/17nMG7hYjIzrdtzsO_6MrBg7ZPGbtGibf/preview",
+        url: "/mapa-iquitos.jpg",
       },
       {
         label: "Sostenibilidad",
@@ -153,11 +153,11 @@ export const siteConfig = {
         type: "modal",
         url: "https://drive.google.com/file/d/17nMG7hYjIzrdtzsO_6MrBg7ZPGbtGibf/preview",
       },
-      { label: "Salvaguardias (+30 comunidades nativas)", icon: "shield", type: "stat" },
-      { label: "Productividad (+50 técnicos de Comercio Justo)", icon: "chart", type: "stat" },
-      { label: "Bosques y ciudades (+5 años investigando)", icon: "tree", type: "stat" },
-      { label: "Gobernanza (+4 parques nacionales)", icon: "building", type: "stat" },
-      { label: "Metodología (+10 herramientas)", icon: "tools", type: "stat" },
+      { label: "Salvaguardias: +30 comunidades nativas", icon: "shield", type: "stat" },
+      { label: "Productividad: +50 técnicos de Comercio Justo", icon: "chart", type: "stat" },
+      { label: "Bosques y ciudades: +5 años investigando", icon: "tree", type: "stat" },
+      { label: "Gobernanza: +4 parques nacionales", icon: "building", type: "stat" },
+      { label: "Metodología: +10 herramientas", icon: "tools", type: "stat" },
     ],
   },
 
