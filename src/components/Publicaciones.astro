@@ -44,16 +44,17 @@ import { siteConfig } from "../config";
         <h3 class="font-serif text-xl md:text-2xl font-bold mb-4" style="color: var(--color-primary-dark)">
           {siteConfig.video.title}
         </h3>
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-[var(--color-primary)]/10 aspect-[9/16] max-h-[500px]">
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-[var(--color-primary)]/10 aspect-[9/16] max-h-[500px] bg-[var(--color-surface)]">
           <iframe
-            src={`https://drive.google.com/file/d/${siteConfig.video.driveId}/preview`}
+            src={`https://www.youtube.com/embed/${siteConfig.video.youtubeId}?rel=0&modestbranding=1&playsinline=1`}
             width="100%"
             height="100%"
-            allow="autoplay"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             class="w-full h-full"
             loading="lazy"
             title={siteConfig.video.title}
+            style="border:0"
           ></iframe>
         </div>
       </div>

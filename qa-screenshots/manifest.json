@@ -1,6 +1,6 @@
 {
   "url": "https://tarik-tavera.cofoundy.dev",
-  "timestamp": "2026-03-25T18:09:48.161Z",
+  "timestamp": "2026-04-14T19:49:36.504Z",
   "desktop": {
     "viewport": {
       "width": 1280,
@@ -8,20 +8,20 @@
     },
     "full": {
       "file": "desktop-full.png",
-      "fileSize": "1001KB"
+      "fileSize": "2576KB"
     },
     "sections": [
       {
         "file": "desktop-hero.png",
         "section": "hero",
-        "height": 775,
-        "fileSize": "253KB"
+        "height": 577,
+        "fileSize": "221KB"
       },
       {
         "file": "desktop-sobre.png",
         "section": "sobre",
-        "height": 821,
-        "fileSize": "123KB"
+        "height": 816,
+        "fileSize": "116KB"
       },
       {
         "file": "desktop-soluciones.png",
@@ -32,38 +32,32 @@
       {
         "file": "desktop-amazonia.png",
         "section": "amazonia",
-        "height": 894,
-        "fileSize": "66KB"
-      },
-      {
-        "file": "desktop-video.png",
-        "section": "video",
-        "height": 749,
-        "fileSize": "14KB"
+        "height": 968,
+        "fileSize": "599KB"
       },
       {
         "file": "desktop-portafolio.png",
         "section": "portafolio",
-        "height": 641,
-        "fileSize": "58KB"
+        "height": 649,
+        "fileSize": "64KB"
       },
       {
         "file": "desktop-galeria.png",
         "section": "galeria",
-        "height": 312,
-        "fileSize": "25KB"
+        "height": 1011,
+        "fileSize": "1157KB"
       },
       {
         "file": "desktop-trayectoria.png",
         "section": "trayectoria",
-        "height": 1542,
-        "fileSize": "185KB"
+        "height": 1375,
+        "fileSize": "165KB"
       },
       {
         "file": "desktop-publicaciones.png",
         "section": "publicaciones",
-        "height": 718,
-        "fileSize": "57KB"
+        "height": 828,
+        "fileSize": "83KB"
       },
       {
         "file": "desktop-formacion.png",
@@ -75,16 +69,16 @@
         "file": "desktop-contacto.png",
         "section": "contacto",
         "height": 430,
-        "fileSize": "24KB"
+        "fileSize": "546KB"
       },
       {
-        "file": "desktop-footer-11.png",
-        "section": "footer-11",
+        "file": "desktop-footer-10.png",
+        "section": "footer-10",
         "height": 221,
-        "fileSize": "14KB"
+        "fileSize": "17KB"
       }
     ],
-    "pageHeight": 9192
+    "pageHeight": 8220
   },
   "mobile": {
     "viewport": {
@@ -93,82 +87,76 @@
     },
     "full": {
       "file": "mobile-full.png",
-      "fileSize": "803KB"
+      "fileSize": "955KB"
     },
     "sections": [
       {
         "file": "mobile-hero.png",
         "section": "hero",
-        "height": 987,
-        "fileSize": "154KB"
+        "height": 792,
+        "fileSize": "135KB"
       },
       {
         "file": "mobile-sobre.png",
         "section": "sobre",
-        "height": 1203,
-        "fileSize": "108KB"
+        "height": 1170,
+        "fileSize": "107KB"
       },
       {
         "file": "mobile-soluciones.png",
         "section": "soluciones",
         "height": 1495,
-        "fileSize": "108KB"
+        "fileSize": "109KB"
       },
       {
         "file": "mobile-amazonia.png",
         "section": "amazonia",
-        "height": 806,
-        "fileSize": "46KB"
-      },
-      {
-        "file": "mobile-video.png",
-        "section": "video",
-        "height": 380,
-        "fileSize": "7KB"
+        "height": 1167,
+        "fileSize": "238KB"
       },
       {
         "file": "mobile-portafolio.png",
         "section": "portafolio",
-        "height": 1097,
-        "fileSize": "56KB"
+        "height": 1129,
+        "fileSize": "63KB"
       },
       {
         "file": "mobile-galeria.png",
         "section": "galeria",
-        "height": 252,
-        "fileSize": "12KB"
+        "height": 244,
+        "fileSize": "2KB"
       },
       {
         "file": "mobile-trayectoria.png",
         "section": "trayectoria",
-        "height": 2065,
-        "fileSize": "163KB"
+        "height": 1833,
+        "fileSize": "148KB"
       },
       {
         "file": "mobile-publicaciones.png",
         "section": "publicaciones",
-        "height": 814,
-        "fileSize": "51KB"
+        "height": 1278,
+        "fileSize": "53KB"
       },
       {
         "file": "mobile-formacion.png",
         "section": "formacion",
         "height": 848,
-        "fileSize": "68KB"
+        "fileSize": "69KB"
       },
       {
         "file": "mobile-contacto.png",
         "section": "contacto",
         "height": 346,
-        "fileSize": "16KB"
+        "fileSize": "17KB"
       },
       {
-        "file": "mobile-footer-11.png",
-        "section": "footer-11",
-        "height": 265,
-        "fileSize": "13KB"
+        "file": "mobile-footer-10.png",
+        "section": "footer-10",
+        "height": 285,
+        "fileSize": "14KB"
       }
     ],
-    "pageHeight": 11037
+    "pageHeight": 11006
   }
 }
